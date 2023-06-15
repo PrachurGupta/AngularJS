@@ -4,8 +4,10 @@ var myNinjaApp = angular.module("myNinjaApp", [
 ]);
 
 myNinjaApp.config([
-  "$routeProvider",
-  function ($routeProvider) {
+  "$routeProvider", '$locationProvider',
+  function ($routeProvider,$locationProvider) {
+
+    $locationProvider.html5Mode(true);
     $routeProvider
       .when("/home", {
         templateUrl: "views/home.html",
