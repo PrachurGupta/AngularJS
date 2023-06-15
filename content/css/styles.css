@@ -75,11 +75,10 @@ main {
   transition: 0.4s;
 }
 
-.content button:hover{
+.content button:hover {
   background-color: #777;
-  color:#cacaca;
+  color: #cacaca;
   opacity: 1;
-  
 }
 .content button:nth-child(2) {
   float: right;
@@ -121,6 +120,14 @@ main {
   margin: 15px auto;
 }
 
+.content textarea {
+  width: 90%;
+  padding: 10px 5%;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  margin: 10px 0;
+}
+
 .remove {
   float: right;
   padding: 5px;
@@ -131,4 +138,34 @@ main {
   color: crimson;
   cursor: pointer;
   margin-left: 10px;
+}
+
+main.ng-enter {
+  transition: 0.5s linear all;
+  opacity: 0;
+}
+
+main.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+#ninja-list li.ng-enter {
+  transition: 0.2s linear all;
+  opacity: 0;
+  transform: translateY(42px);
+}
+
+#ninja-list li.ng-enter.ng-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 2px solid red;
+}
+
+input[disabled="disabled"] {
+  opacity: 0.4;
+  cursor: not-allowed !important;
 }

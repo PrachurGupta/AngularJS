@@ -1,5 +1,6 @@
 var myNinjaApp = angular.module("myNinjaApp", [
   "ngRoute",
+  "ngAnimate",
 ]);
 
 myNinjaApp.config([
@@ -9,6 +10,9 @@ myNinjaApp.config([
       .when("/home", {
         templateUrl: "views/home.html",
         controller: "NinjaController",
+      })
+      .when("/contact", {
+        templateUrl: "views/contact.html",
       })
       .when("/directory", {
         templateUrl: "views/directory.html",
@@ -28,7 +32,7 @@ myNinjaApp.directive("randomNinja", [
         ninjas: "=",
         title: "=",
       },
-      templateUrl: 'views/random.html',
+      templateUrl: "views/random.html",
       transclude: true,
       replace: true,
       controller: function ($scope) {

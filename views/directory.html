@@ -9,7 +9,7 @@
     type="text"
     ng-model="search"
     placeholder="Search for a ninja" />
-  <ul>
+  <ul id="ninja-list">
     <li
       ng-repeat="ninja in ninjas | orderBy: order | filter: search"
       ng-show="ninja.available">
